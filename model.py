@@ -1,6 +1,7 @@
 from transformers import AutoModel, AutoConfig
 import torch.nn as nn
 from collections import OrderedDict
+import torch
 
 class CSModel(nn.Module):
     def __init__(self,pretrained_id, model_config = None) -> None:
@@ -44,3 +45,5 @@ class CSModel(nn.Module):
         ).last_hidden_state
         pos_scores = self.cs_model(pos_scores[:,0,:])
         return pos_scores
+model_d = CSModel(pretrained_id='klue/roberta-large')
+model_d.load_state_dict(torch.load('./Domain_Topic_segmentor.pt'))
