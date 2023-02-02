@@ -1,12 +1,10 @@
-import torch
-import torch.hub
-from model import CSModel
+
 model_name = "DTS_for_dialouge"
 model_description = "dialouge Domain Topic Segmentation model"
 model_author = "Hanseong Kim"
-model_url = "https://github.com/boostcampaitech4lv23nlp1/final-project-level3-nlp-07"
+model_url = "https://github.com/dataKim1201/dialouge_Topic_Segmentation"
 
-code_url = "https://github.com/boostcampaitech4lv23nlp1/final-project-level3-nlp-07/blob/master/DTS/model.py"
+code_url = "https://github.com/dataKim1201/dialouge_Topic_Segmentation/blob/main/model.py"
 
 def DTS_for_dialouge(pretrained_id = 'klue/roberta-large'):
     import torch
